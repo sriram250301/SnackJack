@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.snackjack.androidapp">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -8,8 +15,19 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SnackJack">
-        <activity android:name=".MainActivity">
+        android:theme="@style/Theme.SnackJack"
+        tools:replace="android:icon,android:theme,android:allowBackup">
+        <activity android:name=".ui.addtocart.AddToCart"></activity>
+        <activity android:name=".ui.productview.ProductsView" />
+        <activity android:name=".ui.maindashboard.menu.SampleMenu" />
+        <activity
+            android:name=".ui.maindashboard.Dashboard"
+            android:label="@string/title_activity_dashboard"
+            android:theme="@style/Theme.SnackJack.NoActionBar" />
+        <activity android:name=".ui.login.existinguser.SignInVerification" />
+        <activity android:name=".ui.login.existinguser.ExistingUserSignIn" />
+        <activity android:name=".ui.login.LoginActivity" />
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
